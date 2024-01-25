@@ -1,0 +1,78 @@
+
+<script setup lang="ts">
+import { useAREngine } from './AREngine';
+import { TestScene2, moveObject } from './scene'; //import { TestScene, TestScene2, moveObject } from './scene';
+//import {Range_Position,Attack_Position, Range_Position} from './ImgPosition';
+import {ref} from 'vue';
+import { reactive } from 'vue';
+import { isFiring } from './tank/shoot';
+//import Heart from "./Heart.vue"
+//import { useHeartSystem } from './Heart';
+
+const ar_engine = useAREngine(); //シングルトンを取得
+const logoPosition = reactive({ top: 100, left: 200 });
+const Attack_Position = reactive({top:50, left:1500});
+const Range_Position = reactive({top:80, left:20});
+/*
+const scene_a = () => {
+    const newScene = new TestScene();
+    ar_engine.replaceScene(newScene);
+}*/
+
+const scene_b = () => {
+    const newScene = new TestScene2();
+    ar_engine.replaceScene(newScene);
+}
+
+const scene_c = () => {
+    //moveObject();
+  // 何かの処理が実行された場合、HPを減少させる
+  //decreaseHP();
+};
+
+
+
+
+//const scene_d = () => {
+
+
+// useHeartSystemから必要な関数とデータを取得
+//const { hearts, decreaseHP } = useHeartSystem();
+
+
+
+</script>
+
+<template>
+    <!--<img src="./assets/launch.svg" 
+    width="150" height="100" 
+    :style="{position: 'absolute', top:Range_Position.top + '%',left:Range_Position.left + '%'}" 
+    @click="scene_a" />  --> 
+
+    <!--<div class="Heart "> </div>
+    <Heart v-for="heart in hearts" :key="heart.id" />
+    <img src="./heart.png" width="30" height="30" :style="{ marginRight: '5px' }" />-->
+    <img src="./assets/launch.svg" 
+    width="200" height="200"
+    :style="{position: 'absolute', top: 5 +'%', left: 50+ '%'}" 
+    @click="isFiring==true" />
+    <!--<button @click="scene_c">Scene C</button>-->
+    
+</template>./AREngine
+
+
+<style scoped>
+/*.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;*/
+
+/*.Heart {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  }
+*/
+</style>
