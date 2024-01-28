@@ -7,6 +7,7 @@ import type { ArMarkerControls } from "@ar-js-org/ar.js-threejs/types/ArMarkerCo
 //import { moveObject } from "./tank/Move";
 import { createTank, Tank } from "./tank/createTank"
 import { create_enemy_Tank, enemyTank } from "./tank/enemy_Tank"
+//import { updateLoop } from "./tank/shoot";
 THREEx.ArToolkitContext.baseURL = "./";
 
 const log = useLogger();
@@ -23,7 +24,7 @@ export const useAREngine = (): AREngine => {
 }
 
 export class AREngine {
-    scene = new THREE.Scene();
+    scene = new THREE.Scene;
     renderer = new THREE.WebGLRenderer;
     baseNode?: THREE.Object3D;
     delegate?: AREngineDelegate;
@@ -54,6 +55,7 @@ export class AREngine {
     }
 
     start(video_canvas: string) {
+        //updateLoop();
 
         const ar_base_element = document.getElementById(video_canvas)
 

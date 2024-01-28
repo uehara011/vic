@@ -8,7 +8,7 @@ const stationerySizeRanges: Record<string, { min: number, max: number }> = {
     pen: { min: 2, max: 4 },
     note: { min: 3, max: 6 },
     eraser: { min: 2, max: 3 },
-    pen_case: { min:0.2, max:1 },
+    pen_case: { min:0.05, max:0.3 },
     ruler: { min:0.3, max:1 },
     pencil: { min:5, max:7 },
     // 他のオブジェクトに対する範囲を追加

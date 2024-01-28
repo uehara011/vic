@@ -32,7 +32,7 @@ export function generateRandomStationeryData() {
     const randomSize = Math.random() * (sizeRange.max - sizeRange.min) + sizeRange.min;
 
     // 回数に応じて表示位置をずらす
-    const position = new THREE.Vector3(0, call_Count,2);
+    const position = new THREE.Vector3(2, call_Count,0);
     call_Count += 0.1;
 
 

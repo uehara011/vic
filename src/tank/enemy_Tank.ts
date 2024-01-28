@@ -61,5 +61,5 @@ export function create_enemy_Tank(){
     addData(test_data_2)
     const test_data_3 = generateRandomStationeryData();
     addData(test_data_3)
-    loadAndAddModel('./src/glb_file/caterpillar.glb', new THREE.Vector3(0, 0, 2), new THREE.Euler(0, 0, 0), new THREE.Vector3(0.1, 0.1, 0.1));
+    loadAndAddModel('./src/glb_file/caterpillar.glb', new THREE.Vector3(2, 0, 0), new THREE.Euler(0, 0, 0), new THREE.Vector3(0.1, 0.1, 0.1));
 }

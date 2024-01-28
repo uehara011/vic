@@ -9,7 +9,7 @@ export function enemyTank_move() {
     const direction = isMoveAlongX ? 1 : -1;
 
     // 移動距離を1に設定
-    const distance = 0.1;
+    const distance = 0.25;
 
     // X軸またはZ軸方向の変位を計算
     const deltaX = isMoveAlongX ? distance * direction : 0;
